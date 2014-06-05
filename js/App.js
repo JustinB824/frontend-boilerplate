@@ -12,31 +12,34 @@
 =============================================*/
 function App() {
 	
-	/* Defining variables
-		* Constants variables (variables that will never, ever change)
-			* Name using all capital letters separated by underscores
-			* e.g. var MINUTES_PER_HOUR = 60;
-		* Non-constant variables
-			* Name using camelcase, starting with lowercase
-			* e.g. var 
-		* Booleans
-			* Name boolean variables starting with "is"
-			* e.g. var isAppInitialized = false;
+	/* NAMING CONVENTIONS FOR VARIABLE TYPES
+	=============================================*/
+
+	// Constants – variables that will never, ever change. Name using all capital letters separated by underscores. Example:
+	var NUM_MINUTES_PER_HOUR = 60;
+			
+	// Non-constants – Name using camelcase, starting with lowercase. Example:
+	var numOfTimesUserClickedMouse = 12;
+	
+	// Booleans – Name using camelcase, starting with lowercase "is". Example:
+	var isAppInitialized = false;
+
+	
+	/* DEFINING VARIABLE SCOPE
 	=============================================*/
 	
-	//If you need to access a variable from multiple functions within this object, make sure to define it using "this". e.g.: this.variableName = value;
-	this.KEYCODE = {
-		UP: 38,
-		DOWN: 40
-	};
+	// Variables that need to accessible across all of the objects functions – use "this". Example:
+	this.myObjectWideVariable = 10;
 	
-	this.window = {
-		width: 0,
-		height: 0
-	}
+	// Variables that only need to exist in their specific function should start with "_" and not use "this". Example:
+	var _currentDate = new Date();
+	
+	
+	/* Calling functions
+	=============================================*/
+	this.myFunction();
 };
 
+App.prototype.myFunction = function() {
 
-App.prototype.onWindowResize = function() {
-	
 };
