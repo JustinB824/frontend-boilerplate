@@ -1,15 +1,14 @@
-/* App.js – App is the main object on this page. Only one instance of it will exist.
-=============================================*/
-"use strict"; //Enables strict mode for all functions in this file. This will help you write better code by being less lenient with syntax.
+"use strict";
 
-/*	When creating Javascript Prototype Objects (similar to classes):
-	* Define only one object per file.
-	* Name the file the same as the object. For example App.js / function App().
-	* Name the file starting with an uppercase. It indicates this is an object type with a constructor. (so you can call new App())
-=============================================*/
+/**	
+  * App.js – App is the main Application Prototype object. Only one instance of it will exist, and it is created at the bottom of index.html.
+  * 
+  * When creating JavaScript Prototype Objects (similar to classes):
+  	* Define only one object per file.
+  	* Name the file the same as the object. For example App.js / function App().
+  	* Name the file starting with an uppercase. It indicates this is an object type with a constructor. (You can call "new App()")
+	*/
 
-/* This is the constructor. To create a new App, call new App();
-=============================================*/
 function App() {
 	
 	/* NAMING CONVENTIONS FOR VARIABLE TYPES
@@ -18,28 +17,30 @@ function App() {
 	// Constants – variables that will never, ever change. Name using all capital letters separated by underscores. Example:
 	var NUM_MINUTES_PER_HOUR = 60;
 			
-	// Non-constants – Name using camelcase, starting with lowercase. Example:
+	// Non-constants – variables that can change. Name using camelcase, starting with lowercase. Example:
 	var numOfTimesUserClickedMouse = 12;
 	
-	// Booleans – Name using camelcase, starting with lowercase "is". Example:
+	// Booleans – Name using camelcase, starting with lowercase "is" or "has". Example:
 	var isAppInitialized = false;
+	
+	// JQuery DOM Element References – For optimal performance, cache DOM references as much as possible to avoid repetitive jquery look-ups. Name using camelcase starting with "$"
+	this.$body = $('body');
 
-	
-	/* DEFINING VARIABLE SCOPE
-	=============================================*/
-	
 	// Variables that need to accessible across all of the objects functions – use "this". Example:
-	this.myObjectWideVariable = 10;
-	
-	// Variables that only need to exist in their specific function should start with "_" and not use "this". Example:
-	var _currentDate = new Date();
-	
-	
-	/* Calling functions
+	this.WELCOME_STRING = 'Well hello there!';
+		
+	/* Calling functions and passing variables
 	=============================================*/
-	this.myFunction();
+	this.myFunction1( new Date() );
 };
 
-App.prototype.myFunction = function() {
+App.prototype.myFunction1 = function(currentDate) {
+  // Variables that only need to exist in their specific function should start with "_" and not use "this". Example:
+  var _myPrivateVar = 'Todays date is:';
+  
+	this.myFunction2(_myPrivateVar, currentDate);
+};
 
+App.prototype.myFunction2 = function(currentDateAnnouncementString, currentDate) {
+	this.$body.append(this.WELCOME_STRING + ' ' + currentDateAnnouncementString + ' ' + currentDate );
 };
