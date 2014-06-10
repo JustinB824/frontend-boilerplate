@@ -1,2 +1,14 @@
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+
+# Ignore other unneeded files.
+*.swp
+*~
+.project
+.idea
+.secret
+.scssc
 .DS_Store
 */.DS_Store
+/.sass-cache

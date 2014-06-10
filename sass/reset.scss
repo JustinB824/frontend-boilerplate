@@ -1,43 +1,3 @@
-/* Fonts
-=============================================*/
-@font-face {
-  font-family: 'StagBlack';
-  src: url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Black.eot");
-  src: url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Black.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Black.woff") format("woff"), url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Black.ttf") format("truetype"), url("/wp-content/themes/mullen/fonts/StagSansWebUSCC-Black.svg#StagSansWebUSCC-Black") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'StagBook';
-  src: url("/wp-content/themes/mullen/fonts/StagWebUSCC-Book.eot");
-  src: url("/wp-content/themes/mullen/fonts/StagWebUSCC-Book.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/mullen/fonts/StagWebUSCC-Book.woff") format("woff"), url("/wp-content/themes/mullen/fonts/StagWebUSCC-Book.ttf") format("truetype"), url("/wp-content/themes/mullen/fonts/StagWebUSCC-Book.svg#StagWebUSCC-Book") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'StagLight';
-  src: url("/wp-content/themes/mullen/fonts/StagSansUSCC-Light.eot");
-  src: url("/wp-content/themes/mullen/fonts/StagSansUSCC-Light.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/mullen/fonts/StagSansUSCC-Light.woff") format("woff"), url("/wp-content/themes/mullen/fonts/StagSansUSCC-Light.ttf") format("truetype"), url("/wp-content/themes/mullen/fonts/StagSansUSCC-Light.svg#StagWebUSCC-Light") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@charset "UTF-8";
-
-@font-face {
-  font-family: "icons";
-  src:url("/wp-content/themes/mullen/fonts/icons.eot");
-  src:url("/wp-content/themes/mullen/fonts/icons.eot?#iefix") format("embedded-opentype"),
-    url("/wp-content/themes/mullen/fonts/icons.woff") format("woff"),
-    url("/wp-content/themes/mullen/fonts/icons.ttf") format("truetype"),
-    url("/wp-content/themes/mullen/fonts/icons.svg#icons") format("svg");
-  font-weight: normal;
-  font-style: normal;
-
-}
-
 /* Reset & Normalization
 =============================================*/
 html, body, div, span, applet, object, iframe,
@@ -237,6 +197,3 @@ body {
 }
 
 
-* {
-    @include box-sizing(border-box);
-}
