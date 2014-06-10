@@ -12,3 +12,7 @@
 
 
 @import "sizes.scss"; // Your media queries should be listed after all main styles.
+
+* {
+    @include box-sizing(border-box); // This removes padding from adding to the full width of an object
+}
