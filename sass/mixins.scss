@@ -77,3 +77,78 @@
 	-o-animation: $var;
 	animation: $var;
 }
+@mixin background-size($var){
+	-webkit-background-size: $var;
+	-moz-background-size: $var;
+	-ms-background-size: $var;
+	-o-background-size: $var;
+	background-size: $var;
+}
+
+@mixin filter($var) {
+	-webkit-filter: $var;
+	-moz-filter: $var;
+	-o-filter: $var;
+	-ms-filter: $var;
+	filter: $var;
+}
+
+@mixin clearfix {
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin responsiveImage {
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+@mixin alignVert {
+    position: absolute;
+	top: 50%;
+	@include transform(translateY(-50%));
+}
+
+@mixin alignHoriz {
+    position: absolute;
+	left: 50%;
+	@include transform(translateX(-50%));
+}
+
+@mixin alignBoth {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+}
+
+@mixin phablet {
+	@media (min-width: 360px) {
+		@content;
+	}
+}
+@mixin small {
+	@media (min-width: 769px) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media (min-width: 992px) {
+		@content;
+	}
+}
+@mixin superDesktop {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
